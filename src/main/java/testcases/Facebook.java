@@ -16,6 +16,14 @@ public class Facebook extends GenericWrappers {
 		enterByXpath("firstname");
 		enterByName("Lastname", Lastname);
 		
+		invokeApp("chrome", "https://facebook.com");
+		enterByName("firstname", firstname);
+		enterByName("lastname", Lastname);
+		enterByXpath("firstname");
+		enterByName("Lastname", Lastname);
+		
+		
+		
 	}
 	
 }
