@@ -21,9 +21,23 @@ public class Facebook extends GenericWrappers {
 		enterByName("lastname", Lastname);
 		enterByXpath("firstname");
 		enterByName("Lastname", Lastname);
+	}
 		
+		@Test(dataProvider = "fetchData", dataProviderClass = SampleDataProvider.class)
+		public void fb1(String firstname, String Lastname) {
 		
-		
+			invokeApp("chrome", "https://facebook.com");
+			enterByName("firstname", firstname);
+			enterByName("lastname", Lastname);
+			enterByXpath("firstname");
+			enterByName("Lastname", Lastname);
+			
+			invokeApp("chrome", "https://facebook.com");
+			enterByName("firstname", firstname);
+			enterByName("lastname", Lastname);
+			enterByXpath("firstname");
+			enterByName("Lastname", Lastname);
+			
 	}
 	
 }
